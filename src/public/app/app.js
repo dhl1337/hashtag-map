@@ -13,8 +13,7 @@ require([
     "dojo/domReady!"
 ], function(dom, on, request, parser, registry, Locate, Map, MapView) {
     parser.parse();
-    var base_url = "https://api.instagram.com/v1",
-        zipCode = registry.byId("zipCode"),
+    var zipCode = registry.byId("zipCode"),
         searchBtn = dom.byId("findBtn");
 
     var map = new Map({
