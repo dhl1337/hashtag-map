@@ -24,9 +24,10 @@ require([
     var view = new MapView({
         container: "viewDiv",  // Reference to the scene div created in step 5
         map: map,  // Reference to the map object created before the scene
-        zoom: 3,  // Sets the zoom level based on level of detail (LOD)
+        zoom: 5,  // Sets the zoom level based on level of detail (LOD)
         center: [-90.049, 37.485]  // Sets the center point of view in lon/lat
     });
+
 
     var locateBtn = new Locate({
         view: view
@@ -48,11 +49,11 @@ require([
             data = response;
             console.log(data);
         });
-        var view = new MapView({
+        view = new MapView({
             container: "viewDiv",  // Reference to the scene div created in step 5
             map: map,  // Reference to the map object created before the scene
-            zoom: 6,  // Sets the zoom level based on level of detail (LOD)
-            center: [data.coord.lat, data.coord.lon]  // Sets the center point of view in lon/lat
+            zoom: 14,  // Sets the zoom level based on level of detail (LOD)
+            center: [data.coord.lon, data.coord.lat]  // Sets the center point of view in lon/lat
         });
     });
 
